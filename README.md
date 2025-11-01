@@ -61,8 +61,7 @@ Send the link via:
 - QR code
 - Text message
 
-> _"Sali, click here for a surprise from Mommy!"_
-
+> _"Sali, click here for a surprise from Mommy!"_ [Open Card Now](https://github.com/Cathy-45/Salis-good-luck-card.git)
 ---
 
 ## 💻 Built With
