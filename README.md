@@ -1,4 +1,7 @@
 # Salis-good-luck-card
+![Good Luck Card for Sali](https://raw.githubusercontent.com/Cathy-45/Salis-good-luck-card/main/screenshot.png)
+
+
 🌸 **Good Luck, Sali!** 🌸   A beautiful, animated digital card from **Mommy** to Sali’s **Grade 12 exams** starting Monday.   ✨ Floating stars, blooming flowers, and confetti on click!   Built with pure HTML, CSS &amp; JS — no frameworks.   Live at: https://yourusername.github.io/sali-good-luck-card   #GoodLuck #Grade12 #MommyLovesYou
 
 <img src="https://img.shields.io/badge/For-Sali_%F0%9F%92%9C-ff69b4?style=for-the-badge" alt="For Sali" align="right" />
