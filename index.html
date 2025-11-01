@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Good Luck Sali! - From Mommy</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;600&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .card {
+        width: 380px;
+        height: 520px;
+        background: white;
+        border-radius: 25px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        position: relative;
+        animation: float 6s ease-in-out infinite;
+        text-align: center;
+        padding: 30px 25px;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.03);
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .stars {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .star {
+        position: absolute;
+        background: #ffd700;
+        border-radius: 50%;
+        animation: twinkle 2s infinite alternate;
+      }
+
+      @keyframes twinkle {
+        from {
+          opacity: 0.5;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+
+      .header {
+        margin-top: 30px;
+        font-family: "Dancing Script", cursive;
+        font-size: 38px;
+        color: #d81b60;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .name {
+        font-size: 44px;
+        color: #1976d2;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+
+      .message {
+        margin: 30px auto;
+        font-size: 17px;
+        line-height: 1.7;
+        color: #555;
+        max-width: 300px;
+      }
+
+      .highlight {
+        color: #1976d2;
+        font-weight: 600;
+      }
+
+      .mommy {
+        color: #e91e63;
+        font-weight: 600;
+      }
+
+      .footer {
+        margin-top: 35px;
+        font-size: 16px;
+        color: #8e24aa;
+        font-weight: 600;
+      }
+
+      .flowers {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        animation: bloom 3s ease-in-out infinite;
+      }
+
+      @keyframes bloom {
+        0%,
+        100% {
+          transform: translateX(-50%) scale(1);
+        }
+        50% {
+          transform: translateX(-50%) scale(1.15);
+        }
+      }
+
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #ff4081;
+        border-radius: 2px;
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(600px) rotate(720deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="card">
+      <div class="stars" id="stars"></div>
+
+      <h1 class="header">Good Luck</h1>
+      <div class="name">Sali!</div>
+
+      <div class="message">
+        As you begin your <span class="highlight">Grade 12 exams</span> on
+        Monday,<br />
+        know that you've prepared with heart and courage.<br /><br />
+        <span class="mommy">Mommy believes in you</span> — every question is a
+        chance to shine.<br />
+        Stay calm, stay focused, and remember:<br />
+        <strong>You've got this!</strong>
+      </div>
+
+      <div class="footer">
+        With all my love and hugs 💜<br />
+        <span style="font-size: 18px">— Mommy</span>
+      </div>
+
+      <div class="flowers">🌸 🌺 🌸</div>
+    </div>
+
+    <script>
+      // Add floating stars
+      const starsContainer = document.getElementById("stars");
+      const starCount = 15;
+
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+        const size = Math.random() * 6 + 4;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 60}%`;
+        star.style.animationDelay = `${Math.random() * 2}s`;
+        star.style.animationDuration = `${Math.random() * 2 + 1.5}s`;
+        starsContainer.appendChild(star);
+      }
+
+      // Add confetti on click
+      document.getElementById("card").addEventListener("click", () => {
+        for (let i = 0; i < 35; i++) {
+          createConfetti();
+        }
+      });
+
+      function createConfetti() {
+        const confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = `${Math.random() * 100}vw`;
+        const colors = [
+          "#ff4081",
+          "#ffd700",
+          "#40c4ff",
+          "#66bb6a",
+          "#ab47bc",
+          "#ff5722",
+        ];
+        confetti.style.background =
+          colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        document.body.appendChild(confetti);
+
+        setTimeout(() => confetti.remove(), 5000);
+      }
+
+      // Auto confetti every 7 seconds
+      setInterval(() => {
+        for (let i = 0; i < 18; i++) createConfetti();
+      }, 7000);
+    </script>
+  </body>
+</html>
