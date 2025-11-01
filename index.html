@@ -27,14 +27,14 @@
       .card {
         width: 380px;
         height: 520px;
-        background: white;
+        background: rgb(199, 190, 190);
         border-radius: 25px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         overflow: hidden;
         position: relative;
         animation: float 6s ease-in-out infinite;
         text-align: center;
-        padding: 30px 25px;
+        padding: 30px 25px 70px;
         transition: transform 0.3s ease;
       }
 
@@ -81,13 +81,13 @@
         margin-top: 30px;
         font-family: "Dancing Script", cursive;
         font-size: 38px;
-        color: #d81b60;
+        color: #986075;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
       }
 
       .name {
         font-size: 44px;
-        color: #1976d2;
+        color: #5c7d9d;
         font-weight: 600;
         margin: 10px 0;
       }
@@ -101,12 +101,12 @@
       }
 
       .highlight {
-        color: #1976d2;
+        color: #4c7298;
         font-weight: 600;
       }
 
       .mommy {
-        color: #e91e63;
+        color: #b798a2;
         font-weight: 600;
       }
 
@@ -117,24 +117,19 @@
         font-weight: 600;
       }
 
-      .flowers {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 28px;
-        animation: bloom 3s ease-in-out infinite;
-      }
-
-      @keyframes bloom {
-        0%,
-        100% {
-          transform: translateX(-50%) scale(1);
-        }
-        50% {
-          transform: translateX(-50%) scale(1.15);
-        }
-      }
+     .flowers {
+  position: absolute;
+  bottom: 18px;          
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;        
+  animation: bloom 2.5s ease-in-out infinite;
+  pointer-events: none;   
+}
+     @keyframes bloom {
+  0%, 100% { transform: translateX(-50%) scale(1) rotate(0deg); }
+  50% { transform: translateX(-50%) scale(1.25) rotate(6deg); }
+}
 
       .confetti {
         position: absolute;
@@ -163,7 +158,8 @@
       <div class="message">
         As you begin your <span class="highlight">Grade 12 exams</span> on
         Monday,<br />
-        know that you've prepared with heart and courage.<br /><br />
+        know that you've prepared with heart and courage. 
+        Even God demands of us to be strong and courageous! Joshua: 1:8<br /><br />
         <span class="mommy">Mommy believes in you</span> — every question is a
         chance to shine.<br />
         Stay calm, stay focused, and remember:<br />
@@ -174,8 +170,8 @@
         With all my love and hugs 💜<br />
         <span style="font-size: 18px">— Mommy</span>
       </div>
-
-      <div class="flowers">🌸 🌺 🌸</div>
+      <div class="flowers">💖 💜 💖</div>
+      
     </div>
 
     <script>
