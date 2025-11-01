@@ -11,7 +11,7 @@
 ---
 
 ## ✨ Live Preview
-👉 [**Open the Card**](https://yourusername.github.io/sali-good-luck-card) 👈
+👉 [**Open the Card**](https://Cathy-45.github.io/sali-good-luck-card) 👈
 
 *Click it — confetti explodes!*
 
